@@ -10,7 +10,7 @@ const cookieParser = require('cookie-parser'); // phan tich cu phap cookies
 const MongoStore = require('connect-mongo');
 const gobalHandlingError = require('./controllers/errorHandling');
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000;
 dotenv.config({ path: './.env' });
 const DB = process.env.DB_CONNECTION.replace(
   '<password>',
